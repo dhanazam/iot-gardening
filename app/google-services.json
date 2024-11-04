@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "584230224474",
+    "project_id": "smart-farming-3d48a",
+    "storage_bucket": "smart-farming-3d48a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:584230224474:android:56e56c438bfb0416cf8e63",
+        "android_client_info": {
+          "package_name": "com.farmiot.smartagriculture"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvHke2JRBW3WTQUd32mS9Ml2KtDVB_Nu4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

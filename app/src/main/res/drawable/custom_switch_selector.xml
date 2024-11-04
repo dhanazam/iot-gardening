@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Checked state -->
+    <item android:state_checked="true">
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="#00FF00" /> <!-- Green color for checked state -->
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <!-- Unchecked state (default) -->
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <solid android:color="#FF0000" /> <!-- Red color for unchecked state -->
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+</selector>

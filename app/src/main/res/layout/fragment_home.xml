@@ -1,0 +1,419 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.DashboardFragment">
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_82sdp"
+                android:backgroundTint="@color/colorBackground">
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_200sdp">
+
+                    <ImageView
+                        android:id="@+id/imageView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/plant_landscape_foreground" />
+
+                    <View
+                        android:id="@+id/expanded_image_foreground"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:layout_marginStart="@dimen/_18sdp"
+                        android:layout_marginTop="@dimen/_2sdp"
+                        android:layout_marginBottom="@dimen/_12sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_humidity_text"
+                            style="@style/semiTitleText"
+                            android:text="Room Humidity"
+                            android:textColor="@color/gray200Dark"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <com.budiyev.android.circularprogressbar.CircularProgressBar
+                                android:id="@+id/progress_circular_humidity"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                app:animateProgress="true"
+                                app:backgroundStrokeColor="@color/grey"
+                                app:backgroundStrokeWidth="@dimen/_4sdp"
+                                app:drawBackgroundStroke="true"
+                                app:foregroundStrokeCap="round"
+                                app:foregroundStrokeColor="@color/colorPrimary"
+                                app:foregroundStrokeWidth="@dimen/_4sdp"
+                                app:indeterminate="false"
+                                app:maximum="100"
+                                app:progress="60"
+                                app:progressAnimationDuration="300"
+                                app:startAngle="270" />
+
+                            <TextView
+                                android:id="@+id/tv_room_humidity"
+                                style="@style/headTitleText"
+                                android:text="80 %"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tv_room_temp_text"
+                            style="@style/semiTitleText"
+                            android:layout_marginTop="@dimen/_8sdp"
+                            android:text="Room temp"
+                            android:textColor="@color/gray200Dark"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:layout_marginEnd="@dimen/_8sdp"
+                                android:src="@drawable/thermostat"
+                                app:tint="@color/colorPrimary" />
+
+                            <TextView
+                                android:id="@+id/tv_room_temp"
+                                style="@style/headTitleText"
+                                android:text="30 C"
+                                android:textColor="@color/black"
+                                android:textStyle="bold" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/colorPrimary"
+                    android:orientation="vertical"
+                    android:paddingStart="@dimen/_12sdp"
+                    android:paddingTop="@dimen/_8sdp"
+                    android:paddingEnd="@dimen/_12sdp"
+                    android:paddingBottom="@dimen/_12sdp">
+
+                    <TextView
+                        style="@style/titleText"
+                        android:text="Garden Information Bedroom 1"
+                        android:textColor="@color/white" />
+                    <!-- User Name -->
+                    <TextView
+                        style="@style/subTitleText"
+                        android:text="Take a look at your garden information and control it gently. There is nothing to worry about"
+                        android:textColor="@color/white" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <!--Details-->
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/colorBackground"
+                        app:contentPaddingBottom="@dimen/_4sdp"
+                        app:contentPaddingLeft="@dimen/_12sdp"
+                        app:contentPaddingRight="@dimen/_12sdp"
+                        app:contentPaddingTop="@dimen/_4sdp">
+
+                        <LinearLayout
+                            android:id="@+id/container_details"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:animateLayoutChanges="true"
+                            android:orientation="vertical">
+
+
+                            <!--                            Pump Status-->
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:id="@+id/tv_pump_status_text"
+                                    style="@style/semiTitleText"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:text="Pump Status" />
+
+
+                                <RelativeLayout
+                                    android:id="@+id/container_pump_status"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@id/tv_pump_status_text"
+                                    android:background="@drawable/background_curve_rectangular">
+
+                                    <Switch
+                                        android:id="@+id/toggleSwitch_manual_mode"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        android:layout_marginTop="@dimen/_18sdp"
+                                        android:switchPadding="@dimen/_8sdp"
+                                        android:text="Manual Mode"
+                                        android:textColor="@color/white"
+                                        android:thumbTint="@color/colorChecked"
+                                        android:trackTint="@color/colorUnchecked"
+                                        android:buttonTint="@color/colorUnchecked"
+                                        android:textSize="@dimen/_14sdp"
+                                        android:textStyle="bold" />
+
+                                    <TextView
+                                        android:id="@+id/tv_pump_status_title"
+                                        style="@style/titleText"
+                                        android:layout_below="@id/toggleSwitch_manual_mode"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        android:layout_marginTop="@dimen/_8sdp"
+                                        android:text="Pump is running live."
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/tv_pump_status_subtitle"
+                                        style="@style/subTitleText"
+                                        android:layout_below="@id/tv_pump_status_title"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        android:layout_marginTop="@dimen/_4sdp"
+                                        android:layout_marginBottom="@dimen/_8sdp"
+                                        android:text="Pump is operating in manual mode."
+                                        android:textColor="@color/white" />
+
+                                </RelativeLayout>
+
+                                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                                    android:id="@+id/btn_pump_on_off"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignBaseline="@id/container_pump_status"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_marginEnd="@dimen/_12sdp"
+                                    android:baselineAlignBottom="true"
+                                    android:text="Turn On Pump"
+                                    android:textColor="@color/black"
+                                    app:iconTint="@color/black"
+                                    app:icon="@drawable/round_power_settings_new_24" />
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_8sdp">
+
+                                <TextView
+                                    android:id="@+id/tv_view_and_edit_profile"
+                                    style="@style/semiTitleText"
+                                    android:layout_marginTop="@dimen/_8sdp"
+                                    android:text="Plant overview" />
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_80sdp"
+                                    android:layout_alignBaseline="@id/container_soil_moisture"
+                                    android:background="@drawable/background_curve_rectangular">
+
+                                    <TextView
+                                        android:id="@+id/tv_soil_moisture_title"
+                                        style="@style/titleText"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        android:layout_marginTop="@dimen/_18sdp"
+                                        android:text="Soil Moisture"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/tv_soil_moisture_subtitle"
+                                        style="@style/subTitleText"
+                                        android:layout_below="@id/tv_soil_moisture_title"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        android:text="Soil is moist enough."
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/container_soil_moisture"
+                                    android:layout_width="@dimen/_106sdp"
+                                    android:layout_height="@dimen/_106sdp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/_18sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:background="@drawable/background_circle"
+                                    android:backgroundTint="@color/colorBackground"
+                                    android:padding="@dimen/_8sdp">
+
+                                    <!--progress bar implementation-->
+                                    <com.budiyev.android.circularprogressbar.CircularProgressBar
+                                        android:id="@+id/progress_circular_soil_moisture"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        app:animateProgress="true"
+                                        app:backgroundStrokeColor="@color/grey"
+                                        app:backgroundStrokeWidth="@dimen/_8sdp"
+                                        app:drawBackgroundStroke="true"
+                                        app:foregroundStrokeCap="round"
+                                        app:foregroundStrokeColor="@color/colorPrimary"
+                                        app:foregroundStrokeWidth="@dimen/_8sdp"
+                                        app:indeterminate="false"
+                                        app:maximum="100"
+                                        app:progress="60"
+                                        app:progressAnimationDuration="300"
+                                        app:startAngle="270" />
+
+                                    <TextView
+                                        android:id="@+id/tv_soil_moisture"
+                                        style="@style/titleText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:clickable="false"
+                                        android:gravity="center"
+                                        android:text="60%"
+                                        android:textAlignment="center"
+                                        android:textSize="@dimen/_24ssp" />
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="@dimen/_80sdp"
+                                    android:layout_alignBaseline="@id/container_water_level"
+                                    android:background="@drawable/background_curve_rectangular">
+
+                                    <TextView
+                                        android:id="@+id/tv_water_level_title"
+                                        style="@style/titleText"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        android:layout_marginTop="@dimen/_18sdp"
+                                        android:text="Water Level"
+                                        android:textColor="@color/white" />
+
+                                    <TextView
+                                        android:id="@+id/tv_water_level_subtitle"
+                                        style="@style/subTitleText"
+                                        android:layout_below="@id/tv_water_level_title"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginStart="@dimen/_12sdp"
+                                        android:text="Water level is sufficient."
+                                        android:textColor="@color/white" />
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/container_water_level"
+                                    android:layout_width="@dimen/_106sdp"
+                                    android:layout_height="@dimen/_106sdp"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_gravity="center"
+                                    android:layout_marginEnd="@dimen/_18sdp"
+                                    android:layout_marginBottom="@dimen/_8sdp"
+                                    android:background="@drawable/background_circle"
+                                    android:backgroundTint="@color/colorBackground"
+                                    android:padding="@dimen/_8sdp">
+
+                                    <!--progress bar implementation-->
+                                    <com.budiyev.android.circularprogressbar.CircularProgressBar
+                                        android:id="@+id/progress_circular_water_level"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+
+                                        app:animateProgress="true"
+                                        app:backgroundStrokeColor="@color/grey"
+                                        app:backgroundStrokeWidth="@dimen/_8sdp"
+                                        app:drawBackgroundStroke="true"
+                                        app:foregroundStrokeCap="round"
+                                        app:foregroundStrokeColor="@color/colorPrimary"
+                                        app:foregroundStrokeWidth="@dimen/_8sdp"
+                                        app:indeterminate="false"
+                                        app:maximum="100"
+                                        app:progress="90"
+                                        app:progressAnimationDuration="300"
+                                        app:startAngle="270" />
+
+                                    <TextView
+                                        android:id="@+id/tv_water_level"
+                                        style="@style/titleText"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:layout_centerInParent="true"
+                                        android:clickable="false"
+                                        android:gravity="center"
+                                        android:text="90%"
+                                        android:textAlignment="center"
+                                        android:textSize="@dimen/_24ssp" />
+                                </RelativeLayout>
+
+
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                </LinearLayout>
+
+                <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+                    android:id="@+id/btn_sign_out"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="@dimen/_18sdp"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginBottom="@dimen/_28sdp"
+                    android:text="Sign out" />
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+</layout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="gray200Dark">#AFAFAF</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="black_overlay">#66000000</color>
+
+    <color name="glass_transparent">#CCFFFFFF</color>
+
+    <color name="background_gradient_start">#4CAF50</color>
+    <color name="background_gradient_end">#539856</color>
+
+
+    <color name="grey">#E9EAEE</color>
+    <color name="yellow">#F8BA0F</color>
+    <color name="goodgrey">#535353</color>
+    <color name="blue">#293859</color>
+    <color name="lightgrey">#EEEEEE</color>
+
+
+    <color name="colorPrimary">#8BC34A</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorPrimaryContainer">#52C34A</color>
+    <color name="colorOnPrimaryContainer">#FFFFFF</color>
+    <color name="colorSecondary">#625B71</color>
+    <color name="colorOnSecondary">#FFFFFF</color>
+    <color name="colorSecondaryContainer">#E8DEF8</color>
+    <color name="colorOnSecondaryContainer">#1D192B</color>
+    <color name="colorTertiary">#7D5260</color>
+    <color name="colorOnTertiary">#FFFFFF</color>
+    <color name="colorTertiaryContainer">#FFD8E4</color>
+    <color name="colorOnTertiaryContainer">#31111D</color>
+    <color name="colorError">#B3261E</color>
+    <color name="colorErrorContainer">#F9DEDC</color>
+    <color name="colorOnError">#FFFFFF</color>
+    <color name="colorOnErrorContainer">#410E0B</color>
+    <color name="colorBackground">#FFFBFE</color>
+    <color name="colorBackgroundInverse">#000000</color>
+    <color name="colorBackground2">#F7F4F6</color>
+    <color name="colorOnBackground">#1C1B1F</color>
+    <color name="colorSurface">#FFFBFE</color>
+    <color name="colorOnSurface">#1C1B1F</color>
+    <color name="colorSurfaceVariant">#E7E0EC</color>
+    <color name="colorOnSurfaceVariant">#49454F</color>
+    <color name="colorOutline">#79747E</color>
+    <color name="colorOnSurfaceInverse">#F4EFF4</color>
+    <color name="colorSurfaceInverse">#313033</color>
+    <color name="colorInversePrimary">#D0BCFF</color>
+    <color name="colorShadow">#000000</color>
+    <color name="colorPrimaryInverse">#D0BCFF</color>
+
+
+    <color name="colorTitleText">#252525</color>
+    <color name="colorSubTitleText">#626262</color>
+    <color name="colorBodyText">#878787</color>
+
+    <color name="colorTitleTextInverse">#FCFAFD</color>
+    <color name="colorSubTitleTextInverse">#CECECE</color>
+
+
+    <color name="colorUnchecked">#E8DEF8</color> <!-- Green color for checked state -->
+    <color name="colorChecked">#FFF176</color> <!-- Red color for unchecked state -->
+
+
+</resources>
